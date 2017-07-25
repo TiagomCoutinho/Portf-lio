@@ -25,3 +25,10 @@ body {
   transition: all ease-in-out 100ms;
   z-index: -1;
 }
+.banner-parallax.touch {
+  padding-bottom: 112.4%;
+}
+.banner-parallax.touch img {
+  width: 200%;
+  transition: all ease-in-out 10ms;
+}
