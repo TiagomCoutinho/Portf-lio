@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 
-@prllx-color1: #2f122e;
+@prllx-color1: #261A32;
 @prllx-colorbg: #FFDCC6;
+@prllx-bg1: #A96FEF;
+@prllx-bg2: #FFB700;
+@prllx-bgfull: linear-gradient(-135deg, @prllx-bg1 , @prllx-bg2);
+@prllx-bgfull-web: -webkit-linear-gradient(-135deg, @prllx-bg1 , @prllx-bg2);
 
 body{
 	background: @prllx-color1;
@@ -61,7 +65,9 @@ body{
 	}
 }
 .banner-parallax{
-	background: @prllx-colorbg;
+	background: @prllx-bg1;
+	background: @prllx-bgfull-web;
+	background: @prllx-bgfull;
 	overflow: hidden;
 	padding-bottom: 56.2%;
 	position: relative;

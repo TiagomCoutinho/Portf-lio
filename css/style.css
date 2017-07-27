@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 body {
-  background: #2f122e;
+  background: #261A32;
   min-height: 100vw;
 }
 .carregando {
@@ -85,7 +85,9 @@ body {
   }
 }
 .banner-parallax {
-  background: #FFDCC6;
+  background: #A96FEF;
+  background: -webkit-linear-gradient(-135deg, #A96FEF, #FFB700);
+  background: linear-gradient(-135deg, #A96FEF, #FFB700);
   overflow: hidden;
   padding-bottom: 56.2%;
   position: relative;
@@ -159,5 +161,10 @@ body {
   }
 }
 header {
-  display: none;
+  position: fixed;
+  font-family: 'Roboto Slab', serif;
+  width: 100%;
+  z-index: 1;
+  color: #ffffff;
+  padding: 15px;
 }
