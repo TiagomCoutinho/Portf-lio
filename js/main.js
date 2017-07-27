@@ -18,3 +18,12 @@ $(document).ready(function(){
     }
   });
 });
+var targetOffset = $("#anchor").offset().top;
+
+var $w = $(window).scroll(function(){
+    if ( $w.scrollTop() > targetOffset ) {   
+      $('header').addClass('scroll');
+    } else {
+      $('header').removeClass('scroll');
+    }
+});
