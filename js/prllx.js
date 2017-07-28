@@ -13,7 +13,7 @@ $(document).ready(function(){
   draw();
 });
 function scrollEvent(){
-  if($(window).width())
+  if($(window).width());
   $('[prllx="true"]').each(function(){
     if($(this).attr('prllx-touch') === 'false' && SeePrllxTouch()) {var prllxTouch = true;}
     if(!prllxTouch){
