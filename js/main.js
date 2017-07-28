@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	$('.carregando').addClass('ok');
 	$('.banner-parallax__titulo').addClass('ok');
+  $(".header-nav").click(function() {
+    $('header').toggleClass('ativo');
+  });
 	if(!SeePrllxTouch()){
 		$("html").easeScroll();//Habilita o ease scroll apenas em telas não touch
 	}
