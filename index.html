@@ -8,16 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
-<body>
+<body id="topo">
 <div class="carregando"></div>
 <header>
 	<div class="header-imagem">
-		<a href="#">
+		<a href="#topo">
 			<img src="img/logotipo.png" class="logo-branco">
 		</a>
 	</div>
 	<div class="header-menu">
-		<a href="#">SOBRE</a>
+		<a href="#sobre">SOBRE</a>
 		<a href="#">PORTFÓLIO</a>
 		<a href="#">CONTATO</a>
 	</div>
@@ -26,7 +26,7 @@
 	</div>
 </header>
 <div class="ver-mais">
-	<a href="#anchor"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="-1.5 0 51.5 50" width="51.5" height="50"><path d=" M 0 20 L 25 40 L 50 20 L 50 10 L 25 30 L 0 10 L 0 20 Z " fill="rgb(256,256,256)"/></svg></a>
+	<a href="#sobre"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="-1.5 0 51.5 50" width="51.5" height="50"><path d=" M 0 20 L 25 40 L 50 20 L 50 10 L 25 30 L 0 10 L 0 20 Z " fill="rgb(256,256,256)"/></svg></a>
 	<div class="ver-mais__titulo">
 		TIAGO COUTINHO<br><span>Desenvolvedor Front-end</span>
 	</div>
@@ -39,8 +39,13 @@
 	<img id="prllx" prllx="true" prllx-speed="0.4" prllx-dc="bottom" prllx-touch="true" src="img/CAMADA-2.svg"/>
 	<img id="prllx" prllx="true" prllx-speed="0.0" prllx-dc="bottom" prllx-touch="true" src="img/CAMADA-1.svg"/>
 </div>
-<div id="anchor">
-	<img src="img/foto.jpg"/>
+<div id="sobre" class="container">
+	<div class="col col_6">
+		<div class="sobre-foto show-me"></div>
+	</div>
+	<div class="col col_6">
+		<div class="show-me show-me_d1"></div>
+	</div>
 </div>
 <footer>
 	<script type="text/javascript" src="js/jquery.easeScroll.js"></script>
