@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 @prllx-color1: #261A32;
 @prllx-colorbg: #FFDCC6;
@@ -10,7 +11,9 @@
 
 body{
 	background: @prllx-color1;
-	min-height: 200vw;
+}
+b{
+	font-weight: 700!important;
 }
 .carregando{
 	width: 100%;
@@ -67,6 +70,7 @@ body{
 		color: #ffffff;
 		font-family: 'Roboto Slab', serif;
 		font-size: 45px;
+		font-weight: 300;
 		span{
 			font-weight: 700;
 		}
@@ -74,10 +78,12 @@ body{
 	@media (max-width:770px){
 		&__titulo{
 			font-size: 5.85vw;
+			//bottom: 5vw;
 		}
 	}
 	@media (max-width:700px){
 		a{display: none;}
+		height: 56.2vw * 2;
 	}
 }
 .banner-parallax{
@@ -153,7 +159,7 @@ body{
 	max-width: 1100px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 75px 20px 0 20px;
+	padding: 75px 20px;
 	&:after {
 	    content: "";
 	    display: table;
@@ -167,18 +173,24 @@ body{
 		transition-delay:500ms!important;
 	}
 	&_d2{
-		transition-delay:1000ms!important;
-	}
-	&_d3{
 		transition-delay:1500ms!important;
 	}
+	&_d3{
+		transition-delay:3000ms!important;
+	}
 	&_d4{
-		transition-delay:2000ms!important;
+		transition-delay:4500ms!important;
 	}
 	&_d5{
-		transition-delay:2500ms!important;
+		transition-delay:6000ms!important;
 	}
 	&.isee{
 		opacity: 1;
+	}
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Roboto Slab', serif;
+	&.white{
+		color: #ffffff;
 	}
 }

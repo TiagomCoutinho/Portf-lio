@@ -30,7 +30,7 @@ $(document).ready(function(){
     }
   });
 });
-var targetOffset = $("#sobre").offset().top;
+var targetOffset = $("#sobre").offset().top - $(".ver-mais__titulo").offset().top;
 
 var $w = $(window).scroll(function(){
     if ( $w.scrollTop() > targetOffset ) {   

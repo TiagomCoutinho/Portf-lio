@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 body {
   background: #261A32;
-  min-height: 200vw;
+}
+b {
+  font-weight: 700!important;
 }
 .carregando {
   width: 100%;
@@ -82,6 +85,7 @@ body {
   color: #ffffff;
   font-family: 'Roboto Slab', serif;
   font-size: 45px;
+  font-weight: 300;
 }
 .ver-mais__titulo span {
   font-weight: 700;
@@ -92,6 +96,9 @@ body {
   }
 }
 @media (max-width: 700px) {
+  .ver-mais {
+    height: 112.4vw;
+  }
   .ver-mais a {
     display: none;
   }
@@ -169,7 +176,7 @@ body {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 75px 20px 0 20px;
+  padding: 75px 20px;
 }
 .container:after {
   content: "";
@@ -184,19 +191,35 @@ body {
   transition-delay: 500ms!important;
 }
 .show-me_d2 {
-  transition-delay: 1000ms!important;
-}
-.show-me_d3 {
   transition-delay: 1500ms!important;
 }
+.show-me_d3 {
+  transition-delay: 3000ms!important;
+}
 .show-me_d4 {
-  transition-delay: 2000ms!important;
+  transition-delay: 4500ms!important;
 }
 .show-me_d5 {
-  transition-delay: 2500ms!important;
+  transition-delay: 6000ms!important;
 }
 .show-me.isee {
   opacity: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+}
+h1.white,
+h2.white,
+h3.white,
+h4.white,
+h5.white,
+h6.white {
+  color: #ffffff;
 }
 header {
   box-sizing: border-box;
@@ -206,7 +229,6 @@ header {
   color: #FFFFFF;
   width: 100%;
   z-index: 1;
-  padding: 15px;
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
@@ -215,6 +237,7 @@ header {
 }
 header .header-imagem {
   position: absolute;
+  top: 15px;
   left: 15px;
   transition: all ease-in-out 0.5s;
 }
@@ -229,16 +252,17 @@ header .header-nav {
   display: none;
   cursor: pointer;
   position: absolute;
-  top: 25px;
+  top: 35px;
   right: 15px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+  transition: all ease-in-out 0.5s;
 }
 header .header-nav span {
   position: absolute;
   display: block;
-  width: 80px;
-  height: 10px;
+  width: 60px;
+  height: 5px;
   background: #ffffff;
   top: 50%;
   transform: translateY(-50%);
@@ -247,20 +271,21 @@ header .header-nav span:after,
 header .header-nav span:before {
   content: '';
   position: absolute;
-  width: 80px;
-  height: 10px;
+  width: 60px;
+  height: 5px;
   background: #ffffff;
 }
 header .header-nav span:after {
-  top: -35px;
+  top: -27.5px;
 }
 header .header-nav span:before {
-  top: 35px;
+  top: 27.5px;
 }
 header .header-menu {
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.5s;
   position: absolute;
   right: 15px;
+  top: 15px;
   height: 60px;
   box-sizing: border-box;
   padding: 15px 0;
@@ -289,10 +314,17 @@ header .header-menu a:hover:after {
   height: 3px;
 }
 header.scroll {
+  height: 70px;
   background: rgba(38, 26, 50, 0.75);
 }
+header.scroll .header-menu {
+  padding: 0px;
+}
+header.scroll .header-imagem {
+  top: 5px;
+}
 header.scroll .header-imagem .logo-branco {
-  width: 100px;
+  width: 60px;
 }
 @media (max-width: 700px) {
   header .header-nav {
@@ -318,22 +350,56 @@ header.scroll .header-imagem .logo-branco {
     opacity: 1;
     padding-top: 140px;
   }
+  header.scroll .header-nav {
+    top: 5px;
+  }
+  header.scroll.ativo .header-menu {
+    padding-top: 80px;
+  }
 }
 #sobre {
   text-align: center;
 }
+#sobre .col {
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  line-height: 25px;
+}
+#sobre .col-foto {
+  text-align: center;
+}
+#sobre .col h1 {
+  line-height: 65px;
+  font-weight: 300;
+}
+#sobre .col h1 span {
+  font-weight: 700;
+}
 #sobre .sobre-foto {
   display: inline-block;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  background: url(../img/foto.jpg);
+  max-width: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../img/foto.jpg);
   box-shadow: 0px 0px 0px 3px #ffffff;
   transition: all ease-in-out 0.2s;
 }
+#sobre .sobre-foto span {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+}
 #sobre .sobre-foto:hover {
-  background: url(../img/foto-hover.jpg);
+  background-image: url(../img/foto-hover.jpg);
   box-shadow: 0px 0px 0px 7px #ffffff;
+}
+@media (max-width: 887px) {
+  .col {
+    padding: 0 35px;
+  }
 }
 @media (min-width: 888px) {
   .col {

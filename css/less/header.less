@@ -6,7 +6,6 @@ header{
 	color: @header-main;
 	width: 100%;
 	z-index: 1;
-	padding: 15px;
 	font-size: 25px;
 	font-weight: 700;
 	line-height: 30px;
@@ -14,6 +13,7 @@ header{
 	transition: all ease-in-out .2s;
 	.header-imagem{
 		position: absolute;
+		top: 15px;
 		left: 15px;
 		transition: all ease-in-out .5s;
 		a{
@@ -28,37 +28,39 @@ header{
 		display: none;
 		cursor: pointer;
 		position: absolute;
-		top: 25px;
+		top: 35px;
 		right: 15px;
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
+		transition: all ease-in-out .5s;
 		span{
 			position: absolute;
 			display: block;
-			width: 80px;
-			height: 10px;
+			width: 60px;
+			height: 5px;
 			background: #ffffff;
 			top: 50%;
 			transform: translateY(-50%);
 			&:after,&:before{
 				content: '';
 				position: absolute;
-				width: 80px;
-				height: 10px;
+				width: 60px;
+				height: 5px;
 				background: #ffffff;
 			}
 			&:after{
-				top: -35px;
+				top: -27.5px;
 			}
 			&:before{
-				top: 35px;
+				top: 27.5px;
 			}
 		}
 	}
 	.header-menu{
-		transition: all ease-in-out .2s;
+		transition: all ease-in-out .5s;
 		position: absolute;
 		right: 15px;
+		top: 15px;
 		height: 60px;
 		box-sizing: border-box;
     	padding: 15px 0;
@@ -89,9 +91,14 @@ header{
 		}
 	}
 	&.scroll{
+		height: 70px;
+		.header-menu{
+			padding: 0px;
+		}
 		.header-imagem{
+			top: 5px;
 			.logo-branco{
-				width: 100px;
+				width: 60px;
 			}
 		}
 		background: rgba(38, 26, 50, .75);
@@ -118,6 +125,16 @@ header{
 				height: 100%;
 				opacity: 1;
 				padding-top: 140px;
+			}
+		}
+		&.scroll{
+			.header-nav{
+				top: 5px;
+			}
+			&.ativo{
+				.header-menu{
+					padding-top: 80px;
+				}
 			}
 		}
 	}
