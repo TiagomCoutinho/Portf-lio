@@ -8,12 +8,17 @@
 @prllx-bgfull: linear-gradient(-135deg, @prllx-bg1 , @prllx-bg2);
 @prllx-bgfull-web: -webkit-linear-gradient(-135deg, @prllx-bg1 , @prllx-bg2);
 @header-main: #FFFFFF;
+@color-1: #E0D74F;
+@color-2: #A1398D;
+@color-3: #E0914F;
+@color-4: #308787;
+@color-5: #3FB33F;
 
 body{
 	background: @prllx-color1;
 }
 b{
-	font-weight: 700!important;
+	font-weight: 700;
 }
 .carregando{
 	width: 100%;
@@ -190,7 +195,15 @@ b{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
 	&.white{
 		color: #ffffff;
+	}
+	&.r-font{
+		font-weight: 400;
+	}
+	span{
+		font-weight: 700;
+		display: inline-block;
 	}
 }

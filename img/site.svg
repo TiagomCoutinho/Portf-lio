@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg style="isolation:isolate" viewBox="0 0 250 120" xmlns="http://www.w3.org/2000/svg">
+<g fill="#308787" style="isolation:isolate">
+<path d="m30 10l-30 50 30 50h10l-30-50 30-50h-10z"/>
+<path d="m220 110l30-50-30-50h-10l30 50-30 50h10z"/>
+<path d="m110 110l-10 10h50l-10-10h-30z"/>
+<path d="m60 0v110h130v-110h-130zm10.001 10.001h110v90h-110v-90z"/>
+<path d="m140 20l-40 70h10l40-70h-10z"/>
+</g>
+</svg>
