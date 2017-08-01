@@ -251,12 +251,13 @@ header {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.5s;
 }
 header .header-imagem {
   position: absolute;
   top: 15px;
   left: 15px;
+  z-index: 1;
   transition: all ease-in-out 0.5s;
 }
 header .header-imagem a {
@@ -270,34 +271,37 @@ header .header-nav {
   display: none;
   cursor: pointer;
   position: absolute;
-  top: 35px;
-  right: 15px;
-  width: 60px;
-  height: 60px;
+  top: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   transition: all ease-in-out 0.5s;
+  transform: rotate(0deg);
 }
 header .header-nav span {
   position: absolute;
   display: block;
-  width: 60px;
-  height: 5px;
+  width: 50px;
+  height: 3px;
   background: #ffffff;
   top: 50%;
   transform: translateY(-50%);
+  transition: all ease-in-out 0.5s;
 }
 header .header-nav span:after,
 header .header-nav span:before {
   content: '';
   position: absolute;
-  width: 60px;
-  height: 5px;
+  width: 50px;
+  height: 3px;
   background: #ffffff;
+  transition: all ease-in-out 0.5s;
 }
 header .header-nav span:after {
-  top: -27.5px;
+  top: -23.5px;
 }
 header .header-nav span:before {
-  top: 27.5px;
+  top: 23.5px;
 }
 header .header-menu {
   transition: all ease-in-out 0.5s;
@@ -368,8 +372,30 @@ header.scroll .header-imagem .logo-branco {
     opacity: 1;
     padding-top: 140px;
   }
+  header.ativo .header-nav {
+    transform: rotate(360deg);
+  }
+  header.ativo .header-nav span {
+    background: transparent;
+  }
+  header.ativo .header-nav span:after,
+  header.ativo .header-nav span:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #ffffff;
+  }
+  header.ativo .header-nav span:after {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  header.ativo .header-nav span:before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
   header.scroll .header-nav {
-    top: 5px;
+    top: 10px;
   }
   header.scroll.ativo .header-menu {
     padding-top: 80px;
@@ -419,6 +445,8 @@ header.scroll .header-imagem .logo-branco {
 .break .bloco-ab {
   background: #261A32;
   color: #308787;
+  transition: all ease-in-out 0.2s;
+  box-shadow: 0px 0px 0px 0px #ffffff;
 }
 .break .bloco-ab-right {
   max-width: 220px;
@@ -427,6 +455,12 @@ header.scroll .header-imagem .logo-branco {
 .break .bloco-ab-left {
   max-width: 120px;
   left: 20px;
+}
+.break .bloco-ab a {
+  color: #308787;
+}
+.break .bloco-ab:hover {
+  box-shadow: 0px 0px 0px 7px #ffffff;
 }
 .break h2 {
   box-shadow: -5px 0px 0px 0px #308787;
@@ -469,7 +503,7 @@ header.scroll .header-imagem .logo-branco {
 }
 @media (max-width: 887px) {
   .col {
-    padding: 0 35px;
+    padding: 0 10px;
   }
   .bloco-ab {
     position: static;
@@ -489,7 +523,7 @@ header.scroll .header-imagem .logo-branco {
     box-sizing: border-box;
   }
   .col_space {
-    padding: 0 15px;
+    padding: 0 7.5px;
   }
   .col_1 {
     width: 8.33333333%;
@@ -551,4 +585,9 @@ header.scroll .header-imagem .logo-branco {
   .bloco-ab-3 {
     padding-bottom: 130%;
   }
+}
+#portfolio {
+  font-family: 'Raleway', sans-serif;
+  background-color: #E0D74F;
+  color: #261A32;
 }

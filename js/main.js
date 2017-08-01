@@ -4,6 +4,9 @@ $(document).ready(function(){
   $(".header-nav").click(function() {
     $('header').toggleClass('ativo');
   });
+  $(".header-link").click(function(){
+    $('header').toggleClass('ativo');
+  });
 	if(!SeePrllxTouch()){
 		$("html").easeScroll();//Habilita o ease scroll apenas em telas não touch
 	}
@@ -24,7 +27,7 @@ $(document).ready(function(){
       var hash = this.hash;
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 2000, function(){
+      }, 500, function(){
         window.location.hash = hash;
       });
     }
