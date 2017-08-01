@@ -252,6 +252,7 @@ header {
   line-height: 30px;
   text-transform: uppercase;
   transition: all ease-in-out 0.5s;
+  z-index: 2;
 }
 header .header-imagem {
   position: absolute;
@@ -590,4 +591,41 @@ header.scroll .header-imagem .logo-branco {
   font-family: 'Raleway', sans-serif;
   background-color: #E0D74F;
   color: #261A32;
+}
+#portfolio .col {
+  padding: 10px;
+}
+#portfolio h2 {
+  box-shadow: -5px 0px 0px 0px #261A32;
+}
+#portfolio h2 span {
+  display: inline-block;
+  padding-left: 5px;
+}
+#portfolio .portfolio-box {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 70%;
+  background-color: #261A32;
+  box-shadow: 0px 0px 0px 0px #ffffff;
+  transition: all ease-in-out 0.2s;
+  color: #E0D74F;
+}
+#portfolio .portfolio-box span {
+  display: block;
+  position: absolute;
+  font-size: 45px;
+  bottom: 5px;
+  left: 10px;
+  line-height: 45px;
+}
+#portfolio .portfolio-box:hover {
+  transform: scale(1.1, 1.1);
+  z-index: 1;
+  box-shadow: 0px 0px 0px 7px #ffffff;
+}
+#portfolio .portfolio-1 {
+  background-image: url(../img/portfolio/icon-1.png);
+  background-size: 100% 100%;
 }
