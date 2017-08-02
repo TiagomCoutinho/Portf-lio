@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 body {
   background: #261A32;
+  overflow-x: hidden;
 }
 b {
   font-weight: 700;
@@ -182,6 +183,11 @@ b {
   content: "";
   display: table;
   clear: both;
+}
+@media (max-width: 375px) {
+  .container h1 {
+    font-size: 16vw;
+  }
 }
 .show-me {
   opacity: 0;
@@ -587,6 +593,24 @@ header.scroll .header-imagem .logo-branco {
     padding-bottom: 130%;
   }
 }
+.col-center {
+  text-align: center;
+}
+.col-center h1 {
+  text-align: left;
+}
+.col-t_t1,
+.col-t_t2,
+.col-t_t3 {
+  text-align: left;
+  box-sizing: border-box;
+  max-width: 310px;
+  width: 100%;
+  display: inline-block;
+}
+.col-t.col_space {
+  padding: 7.5px;
+}
 #portfolio {
   font-family: 'Raleway', sans-serif;
   background-color: #E0D74F;
@@ -610,15 +634,8 @@ header.scroll .header-imagem .logo-branco {
   background-color: #261A32;
   box-shadow: 0px 0px 0px 0px #ffffff;
   transition: all ease-in-out 0.2s;
+  background-size: cover;
   color: #E0D74F;
-}
-#portfolio .portfolio-box span {
-  display: block;
-  position: absolute;
-  font-size: 45px;
-  bottom: 5px;
-  left: 10px;
-  line-height: 45px;
 }
 #portfolio .portfolio-box:hover {
   transform: scale(1.1, 1.1);
@@ -627,5 +644,33 @@ header.scroll .header-imagem .logo-branco {
 }
 #portfolio .portfolio-1 {
   background-image: url(../img/portfolio/icon-1.png);
-  background-size: 100% 100%;
+}
+#portfolio .portfolio-2 {
+  background-image: url(../img/portfolio/icon-2.png);
+}
+#portfolio .portfolio-3 {
+  background-image: url(../img/portfolio/icon-3.png);
+}
+#portfolio .portfolio-4 {
+  background-image: url(../img/portfolio/icon-4.png);
+}
+#portfolio .portfolio-5 {
+  background-image: url(../img/portfolio/icon-5.png);
+}
+#portfolio .portfolio-6 {
+  background-image: url(../img/portfolio/icon-6.png);
+}
+#portfolio .portfolio-titulo {
+  display: block;
+  position: absolute;
+  font-size: 28px;
+  bottom: 5px;
+  left: 10px;
+  line-height: 33px;
+  color: #ffffff;
+}
+#portfolio .portfolio-titulo span {
+  font-size: 20px;
+  display: block;
+  color: #E0D74F;
 }

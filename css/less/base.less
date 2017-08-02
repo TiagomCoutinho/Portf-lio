@@ -16,6 +16,7 @@
 
 body{
 	background: @prllx-color1;
+	overflow-x: hidden;
 }
 b{
 	font-weight: 700;
@@ -169,6 +170,11 @@ b{
 	    content: "";
 	    display: table;
 	    clear: both;
+	}
+	@media (max-width:375px){
+		h1{
+			font-size: 16vw;
+		}
 	}
 }
 .show-me{
