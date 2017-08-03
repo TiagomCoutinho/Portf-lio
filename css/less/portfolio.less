@@ -16,6 +16,7 @@
 		&-box{
 			display: block;
 			position: relative;
+			overflow-y: hidden;
 			width: 100%;
 			padding-bottom: 70%;
 			background-color: @prllx-color1;
@@ -27,6 +28,10 @@
 				transform: scale(1.1,1.1);
 				z-index: 1;
 				box-shadow: 0px 0px 0px 7px #ffffff;
+    			.portfolio-agencia{
+    				height: 15px;
+    				margin-bottom: 15px;
+    			}
 			}
 		}
 		&-1{
@@ -47,6 +52,12 @@
 		&-6{
 			background-image: url(../img/portfolio/icon-6.png);
 		}
+		&-7{
+			background-image: url(../img/portfolio/icon-7.png);
+		}
+		&-8{
+			background-image: url(../img/portfolio/icon-8.png);
+		}
 		&-titulo{
 			display: block;
 			position: absolute;
@@ -60,6 +71,15 @@
     			display: block;
     			color: @color-1;
     		}
+		}
+		&-agencia{
+			height: 0;
+			transition: all ease-in-out .2s;
+			font-size: 15px;
+			color: @color-1;
+			&:before{
+				content: 'Agencia: ';
+			}
 		}
 	}
 }
