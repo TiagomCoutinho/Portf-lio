@@ -328,6 +328,10 @@ header .header-menu a {
   color: #FFFFFF;
   position: relative;
 }
+header .header-menu a img {
+  display: inline-block;
+  margin: -5px;
+}
 header .header-menu a:after {
   position: absolute;
   top: 100%;
