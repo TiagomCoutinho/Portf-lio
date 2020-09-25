@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hiragana</title>
+	<style>
+		body{
+			font-family: sans-serif;
+			text-align: center;
+			background-color: #111111;
+			color: #ffffff;
+		}
+		.btn{
+			width: 300px;
+			background-color: #ffffff;
+			color: #111111;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 48px;
+			padding: 12px;
+			cursor: pointer;
+		}
+		.big{
+			font-size: 100px;
+			margin-top: 24px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Estudos em Hiragana</h1>
+	<p>Isso aqui só existe para ajudar a treinar Hiragana, atualmente estou treinando do あ até o も</p>
+	<h2>Falta <span></span></h2>
+	<div class="btn">CLICK</div>
+	<div class="big">[?]</div>
+	<script>
+		var hiragana = [
+			"A","I","U","E","O",
+			"KA","KI","KU","KE","KO",
+			"SA","SHI","SU","SE","SO",
+			"TA","CHI","TSU","TE","TO",
+			"NA","NI","NU","NE","NO",
+			"HA","HI","FU","HE","HO",
+			"MA","MI","MU","ME","MO"
+		];
+		var hiraganaCount = {};
+		var hiraganaTotal = hiragana.length;
+		document.querySelector("h2>span").innerHTML = hiragana.length;
+
+		var btn = document.querySelector(".btn");
+		btn.onclick = function(){
+			hiraganaRandomSelector();
+		};
+
+		function hiraganaRandomSelector(){
+			var infiniloop = true;
+			while(infiniloop){
+				var item = Math.floor(Math.random() * (hiragana.length));
+				if(parseInt(document.querySelector("h2>span").innerHTML) < 0){
+					var hiraganaTotal = hiragana.length;
+					hiraganaCount = {};
+					infiniloop = false;
+				}else{
+					if(!hiraganaCount[item]){
+						hiraganaCount[item] = true;
+						document.querySelector("h2>span").innerHTML = parseInt(document.querySelector("h2>span").innerHTML) - 1;
+						document.querySelector(".big").innerHTML = hiragana[item];
+						infiniloop = false;
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>
